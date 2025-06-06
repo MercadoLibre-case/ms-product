@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "title": "iPhone 15 Pro Max",
+    "description": "Último modelo da Apple...",
+    "price": {
+      "amount": 999.99,
+      "currency": "USD"
+    },
+    "images": [
+      "https://www.iplacecorp.com.br/ccstore/v1/images/?source=/file/v6950875671755731273/products/226691.00-apple-iphone-15-pro-max-de-256gb-titanio-branco-mu783be-a.jpg&height=475&width=475",
+      "https://cdn.awsli.com.br/600x700/1861/1861669/produto/248526003/apple-iphone-15-pro-max--256-gb--tit-nio-azul--2--rqs5ylol0t.jpg"
+    ],
+    "stock": 14,
+    "seller_id": "seller123"
+  }
+]
