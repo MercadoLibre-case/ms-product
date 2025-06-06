@@ -8,11 +8,11 @@ Este microserviço faz parte do projeto **MercadoLibre Clone – Item Detail Pag
 
 Expor dados de produto via HTTP, com os seguintes campos:
 
-- Título e descrição
-- Imagens
-- Preço (valor + moeda)
-- Estoque
-- ID do vendedor (referência cruzada para outro microserviço)
+- Título e descrição  
+- Imagens  
+- Preço (valor + moeda)  
+- Estoque  
+- ID do vendedor (referência cruzada para outro microserviço)  
 
 ---
 
@@ -22,6 +22,7 @@ Expor dados de produto via HTTP, com os seguintes campos:
 - **Framework:** FastAPI
 - **Validação de dados:** Pydantic
 - **Testes:** Pytest
+- **Cobertura mínima:** 80% (atualmente 96%)
 - **Persistência simulada:** Arquivo JSON (`products.json`)
 - **Documentação automática:** Swagger UI (`/docs`)
 
@@ -40,16 +41,22 @@ ms-product-detail/
 │   │   ├── interfaces/          # Contratos (ex: IProductRepository)
 │   │   └── services/            # Regras de negócio (ex: ProductService)
 │   ├── dtos/                    # Schemas Pydantic (entrada/saída de dados)
-│   │   └── product_schema.py
+│   │   ├── product_schema.py
+│   │   └── mapper.py            # Conversão entre entidades e DTOs
 │   ├── infrastructure/
 │   │   └── data/                # Repositórios concretos e dados simulados
 │   │       ├── product_repository_json.py
 │   │       └── products.json
 │   ├── config/                  # Configurações da aplicação (ex: paths)
-│   └── shared/                  # Utilitários (tratamento de erros, etc.)
+│   └── shared/                  # Utilitários e exceções
+│       └── exceptions.py
 ├── tests/
-│   ├── unit/                    # Testes de unidade (serviços, domínio)
-│   └── integration/             # Testes de API com TestClient
+│   ├── unit/                    # Testes de unidade (serviços, domínio, mapper)
+│   │   └── test_product_service.py
+│   │   └── test_mapper.py
+│   └── integrations/            # Testes de API com TestClient
+│       └── test_api_product.py
 ├── requirements.txt             # Dependências do projeto
+├── pytest.ini                   # Configuração de testes e cobertura
 └── README.md                    # Este documento
 ```
