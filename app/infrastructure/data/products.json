@@ -3,6 +3,28 @@
     "id": "1",
     "title": "iPhone 15 Pro Max",
     "description": "Último modelo da Apple...",
+    "attributes": [
+      {
+        "name": "Tamanho da tela",
+        "value": "6.6″"
+      },
+      {
+        "name": "Memória interna",
+        "value": "256 GB"
+      },
+      {
+        "name": "Câmera traseira principal",
+        "value": "50 Mpx"
+      },
+      {
+        "name": "Câmera frontal principal",
+        "value": "32 Mpx"
+      },
+      {
+        "name": "NFC",
+        "value": "Sim"
+      }
+    ],
     "price": {
       "amount": 999.99,
       "currency": "USD"

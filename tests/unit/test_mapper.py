@@ -1,4 +1,4 @@
-from app.domain.entities.product import Product, Price
+from app.domain.entities.product import Product, Price, Attributes
 from app.dtos.mapper import product_to_schema
 
 
@@ -7,6 +7,12 @@ def test_product_to_schema():
         id="123",
         title="Teste",
         description="Desc",
+        attributes=[
+            Attributes(
+                name="NFC",
+                value="Sim"
+            )
+        ],
         price=Price(10.0, "USD"),
         images=["img.jpg"],
         stock=3,

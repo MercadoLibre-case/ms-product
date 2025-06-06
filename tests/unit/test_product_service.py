@@ -1,5 +1,5 @@
 import pytest
-from app.domain.entities.product import Product, Price
+from app.domain.entities.product import Product, Price, Attributes
 from app.domain.services.product_service import ProductService
 from app.domain.interfaces.product_repository_interface import IProductRepository
 from app.shared.exceptions import ProductNotFoundException
@@ -13,6 +13,12 @@ class FakeRepo(IProductRepository):
                 id="1",
                 title="Produto Teste",
                 description="Descrição",
+                attributes=[
+                    Attributes(
+                        name="NFC",
+                        value="Sim"
+                    )
+                ],
                 price=Price(100, "USD"),
                 images=["url1", "url2"],
                 stock=5,

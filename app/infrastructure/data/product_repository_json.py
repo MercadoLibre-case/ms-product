@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
-from app.domain.entities.product import Product, Price
+
+from app.domain.entities.product import Product, Attributes, Price
 from app.domain.interfaces.product_repository_interface import IProductRepository
 
 
@@ -20,6 +21,13 @@ class ProductRepositoryJson(IProductRepository):
                     id=p["id"],
                     title=p["title"],
                     description=p["description"],
+                    attributes=[
+                        Attributes(
+                            name=attribuites["name"],
+                            value=attribuites["value"]
+                        )
+                        for attribuites in p["attributes"]
+                    ],
                     price=Price(
                         amount=p["price"]["amount"],
                         currency=p["price"]["currency"],
