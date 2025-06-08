@@ -1,0 +1,113 @@
+[
+  {
+    "id": "1",
+    "title": "iPhone 15 Pro Max",
+    "description": "Último modelo da Apple...",
+    "attributes": [
+      {
+        "name": "Tamanho da tela",
+        "value": "6.6″"
+      },
+      {
+        "name": "Memória interna",
+        "value": "256 GB"
+      },
+      {
+        "name": "Câmera traseira principal",
+        "value": "50 Mpx"
+      },
+      {
+        "name": "Câmera frontal principal",
+        "value": "32 Mpx"
+      },
+      {
+        "name": "NFC",
+        "value": "Sim"
+      }
+    ],
+    "price": {
+      "amount": 999.99,
+      "currency": "USD"
+    },
+    "images": [
+      "https://www.iplacecorp.com.br/ccstore/v1/images/?source=/file/v6950875671755731273/products/226691.00-apple-iphone-15-pro-max-de-256gb-titanio-branco-mu783be-a.jpg&height=475&width=475",
+      "https://cdn.awsli.com.br/600x700/1861/1861669/produto/248526003/apple-iphone-15-pro-max--256-gb--tit-nio-azul--2--rqs5ylol0t.jpg"
+    ],
+    "stock": 14,
+    "seller_id": "seller123"
+  },
+  {
+    "id": "2",
+    "title": "Samsung Galaxy S24",
+    "description": "Explore o futuro com o novo Galaxy S24.",
+    "attributes": [
+      {
+        "name": "Tamanho da tela",
+        "value": "6.1″"
+      },
+      {
+        "name": "Memória interna",
+        "value": "128 GB"
+      },
+      {
+        "name": "Câmera traseira principal",
+        "value": "200 Mpx"
+      },
+      {
+        "name": "Câmera frontal principal",
+        "value": "40 Mpx"
+      },
+      {
+        "name": "Resistência à água",
+        "value": "IP68"
+      }
+    ],
+    "price": {
+      "amount": 899.99,
+      "currency": "USD"
+    },
+    "images": [
+      "https://images.tcdn.com.br/img/img_prod/769067/smartphone_samsung_galaxy_s24_fe_5g_256gb_cinza_ram_8gb_camera_tripla_traseira_de_50mp_selfie_de_10m_27640005_1_05d49a0d74a47a1fdfb081a2d2f0aa0c.jpg",
+      "https://www.fujioka.com.br/arquivos/ids/273393-1000-1000/a_279248_alta_1.png?v=638827655755770000"
+    ],
+    "stock": 25,
+    "seller_id": "seller456"
+  },
+  {
+    "id": "3",
+    "title": "Camiseta Básica Preta",
+    "description": "Camiseta básica de algodão para o dia a dia.",
+    "attributes": [
+      {
+        "name": "Tecido",
+        "value": "Algodão"
+      },
+      {
+        "name": "Cor",
+        "value": "Preta"
+      },
+      {
+        "name": "Tamanho",
+        "value": "G"
+      },
+      {
+        "name": "Gênero",
+        "value": "Unissex"
+      },
+      {
+        "name": "Composição",
+        "value": "100% Algodão"
+      }
+    ],
+    "price": {
+      "amount": 29.90,
+      "currency": "BRL"
+    },
+    "images": [
+      "https://cdn.sistemawbuy.com.br/arquivos/13ef42c661356c967c0cee1859873499/produtos/65a9930f70caf/preta-costas-65de22e61e597.jpg",
+      "https://cdn.awsli.com.br/600x700/751/751979/produto/29909429/camiseta-basica-masculina-preta-algodao-homem-1-nt1r05773k.jpg"
+    ],
+    "stock": 120,
+    "seller_id": "seller789"
+  }
+]
