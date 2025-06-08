@@ -61,4 +61,4 @@ ms-product-detail/
 └── README.md                    # Este documento
 ```
 
-[![codecov](https://codecov.io/gh/USUARIO/NOME-REPO/branch/main/graph/badge.svg)](https://codecov.io/gh/USUARIO/NOME-REPO)
+[![codecov](https://codecov.io/gh/MercadoLibre-case/ms-product/branch/main/graph/badge.svg)](https://codecov.io/gh/MercadoLibre-case/ms-product)
