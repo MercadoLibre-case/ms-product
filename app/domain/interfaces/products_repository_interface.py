@@ -5,5 +5,9 @@ from app.domain.entities.products import Product
 
 class IProductsRepository(ABC):
     @abstractmethod
-    def get_products(self) -> List[Product] | None:
+    def get_products(self) -> List[Product]:
+        pass
+
+    @abstractmethod
+    def get_by_id(self, product_id: str) -> Product | None:
         pass

@@ -9,5 +9,6 @@ def test_get_products_list():
     assert response.status_code == 200
     json_data = response.json()
     assert isinstance(json_data, list)
+    assert len(json_data) > 0
     assert "id" in json_data[0]
-
+    assert "title" in json_data[0]

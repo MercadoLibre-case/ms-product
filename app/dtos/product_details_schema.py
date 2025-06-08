@@ -1,22 +1,25 @@
-from pydantic import BaseModel
 from typing import List
-
-class AttributesSchema(BaseModel):
-    name: str
-    value: str
+from pydantic import BaseModel
 
 
-class PriceDetailsSchema(BaseModel):
+class PriceSchema(BaseModel):
     amount: float
     currency: str
+
+
+class AttributeSchema(BaseModel):
+    name: str
+    value: str
 
 
 class ProductDetailsSchema(BaseModel):
     id: str
     title: str
     description: str
-    price: PriceDetailsSchema
-    attributes: List[AttributesSchema]
+    price: PriceSchema
+    thumbnail: str
     images: List[str]
+    category: str
+    attributes: List[AttributeSchema]
     stock: int
     seller_id: str

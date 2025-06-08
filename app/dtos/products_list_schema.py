@@ -6,7 +6,7 @@ class PriceSchema(BaseModel):
     currency: str
 
 
-class ProductSchema(BaseModel):
+class ProductListSchema(BaseModel):
     id: str
     title: str
     price: PriceSchema

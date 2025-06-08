@@ -1,25 +1,25 @@
-from app.domain.entities.product_details import ProductDetails, Price, Attributes
-from app.dtos.mapper import product_details_to_schema
+from app.domain.entities.products import Product, Price, Attribute
+from app.dtos.mapper import product_to_details_schema
 
 
 def test_product_details_to_schema():
-    product = ProductDetails(
+    product = Product(
         id="123",
-        title="Teste",
-        description="Desc",
+        title="Produto Teste",
+        description="Descrição completa",
+        price=Price(99.99, "USD"),
+        thumbnail="thumb.jpg",
+        category="categoria1",
         attributes=[
-            Attributes(
-                name="NFC",
-                value="Sim"
-            )
+            Attribute(name="Memória", value="128GB")
         ],
-        price=Price(10.0, "USD"),
-        images=["img.jpg"],
-        stock=3,
-        seller_id="s1"
+        images=["img1.jpg", "img2.jpg"],
+        stock=10,
+        seller_id="vendedor1"
     )
 
-    dto = product_details_to_schema(product)
+    schema = product_to_details_schema(product)
 
-    assert dto.id == "123"
-    assert dto.price.amount == 10.0
+    assert schema.id == "123"
+    assert schema.price.amount == 99.99
+    assert schema.attributes[0].name == "Memória"

@@ -60,3 +60,5 @@ ms-product-detail/
 ├── pytest.ini                   # Configuração de testes e cobertura
 └── README.md                    # Este documento
 ```
+
+[![codecov](https://codecov.io/gh/USUARIO/NOME-REPO/branch/main/graph/badge.svg)](https://codecov.io/gh/USUARIO/NOME-REPO)
