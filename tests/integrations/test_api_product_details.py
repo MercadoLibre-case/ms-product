@@ -4,7 +4,7 @@ from main import app
 client = TestClient(app)
 
 
-def test_get_product_sucesso():
+def test_get_product_details_sucesso():
     response = client.get("/products/1")
     assert response.status_code == 200
     assert "id" in response.json()

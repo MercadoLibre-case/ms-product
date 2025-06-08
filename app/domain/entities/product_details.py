@@ -12,7 +12,7 @@ class Price:
         self.currency = currency
 
 
-class Product:
+class ProductDetails:
     def __init__(
         self,
         id: str,

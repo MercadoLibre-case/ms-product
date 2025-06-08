@@ -1,11 +1,11 @@
 import json
 from pathlib import Path
 
-from app.domain.entities.product import Product, Attributes, Price
-from app.domain.interfaces.product_repository_interface import IProductRepository
+from app.domain.entities.product_details import ProductDetails, Attributes, Price
+from app.domain.interfaces.product_details_repository_interface import IProductDetailsRepository
 
 
-class ProductRepositoryJson(IProductRepository):
+class ProductDetailsRepositoryJson(IProductDetailsRepository):
     def __init__(self, data_file: str):
         self.data_file = Path(data_file)
 
@@ -13,11 +13,11 @@ class ProductRepositoryJson(IProductRepository):
         with open(self.data_file, "r", encoding="utf-8") as file:
             return json.load(file)
 
-    def get_by_id(self, product_id: str) -> Product | None:
+    def get_by_id(self, product_id: str) -> ProductDetails | None:
         products = self._load_data()
         for p in products:
             if p["id"] == product_id:
-                return Product(
+                return ProductDetails(
                     id=p["id"],
                     title=p["title"],
                     description=p["description"],

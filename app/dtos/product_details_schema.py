@@ -6,16 +6,16 @@ class AttributesSchema(BaseModel):
     value: str
 
 
-class PriceSchema(BaseModel):
+class PriceDetailsSchema(BaseModel):
     amount: float
     currency: str
 
 
-class ProductSchema(BaseModel):
+class ProductDetailsSchema(BaseModel):
     id: str
     title: str
     description: str
-    price: PriceSchema
+    price: PriceDetailsSchema
     attributes: List[AttributesSchema]
     images: List[str]
     stock: int

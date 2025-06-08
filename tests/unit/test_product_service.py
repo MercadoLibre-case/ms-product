@@ -1,15 +1,15 @@
 import pytest
-from app.domain.entities.product import Product, Price, Attributes
-from app.domain.services.product_service import ProductService
-from app.domain.interfaces.product_repository_interface import IProductRepository
+from app.domain.entities.product_details import ProductDetails, Price, Attributes
+from app.domain.services.product_details_service import ProductService
+from app.domain.interfaces.product_details_repository_interface import IProductDetailsRepository
 from app.shared.exceptions import ProductNotFoundException
 
 
 # Mock do repositório
-class FakeRepo(IProductRepository):
+class FakeRepo(IProductDetailsRepository):
     def __init__(self):
         self.products = {
-            "1": Product(
+            "1": ProductDetails(
                 id="1",
                 title="Produto Teste",
                 description="Descrição",

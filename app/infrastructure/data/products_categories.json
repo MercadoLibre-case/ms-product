@@ -1,0 +1,22 @@
+[
+  {
+    "id": "smartphones",
+    "name": "Smartphones"
+  },
+  {
+    "id": "clothing",
+    "name": "Roupas"
+  },
+  {
+    "id": "notebooks",
+    "name": "Notebooks"
+  },
+  {
+    "id": "tv",
+    "name": "Televisores"
+  },
+  {
+    "id": "accessories",
+    "name": "Acessórios"
+  }
+]

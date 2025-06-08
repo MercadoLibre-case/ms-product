@@ -1,39 +1,32 @@
-[
-  {
-    "id": "1",
-    "title": "iPhone 15 Pro Max",
-    "description": "Último modelo da Apple...",
-    "attributes": [
-      {
-        "name": "Tamanho da tela",
-        "value": "6.6″"
+  [
+    {
+      "id": "1",
+      "title": "iPhone 15 Pro Max",
+      "thumbnail": "https://www.iplacecorp.com.br/ccstore/v1/images/?source=/file/v6950875671755731273/products/226691.00-apple-iphone-15-pro-max-de-256gb-titanio-branco-mu783be-a.jpg&height=475&width=475",
+      "price": {
+        "amount": 999.99,
+        "currency": "USD"
       },
-      {
-        "name": "Memória interna",
-        "value": "256 GB"
-      },
-      {
-        "name": "Câmera traseira principal",
-        "value": "50 Mpx"
-      },
-      {
-        "name": "Câmera frontal principal",
-        "value": "32 Mpx"
-      },
-      {
-        "name": "NFC",
-        "value": "Sim"
-      }
-    ],
-    "price": {
-      "amount": 999.99,
-      "currency": "USD"
+      "category": "smartphones"
     },
-    "images": [
-      "https://www.iplacecorp.com.br/ccstore/v1/images/?source=/file/v6950875671755731273/products/226691.00-apple-iphone-15-pro-max-de-256gb-titanio-branco-mu783be-a.jpg&height=475&width=475",
-      "https://cdn.awsli.com.br/600x700/1861/1861669/produto/248526003/apple-iphone-15-pro-max--256-gb--tit-nio-azul--2--rqs5ylol0t.jpg"
-    ],
-    "stock": 14,
-    "seller_id": "seller123"
-  }
-]
+    {
+      "id": "2",
+      "title": "Samsung Galaxy S24",
+      "thumbnail": "https://cdn.awsli.com.br/600x700/1861/1861669/produto/248526003/apple-iphone-15-pro-max--256-gb--tit-nio-azul--2--rqs5ylol0t.jpg",
+      "price": {
+        "amount": 899.99,
+        "currency": "USD"
+      },
+      "category": "smartphones"
+    },
+    {
+      "id": "3",
+      "title": "Camiseta Básica Preta",
+      "thumbnail": "https://exemplo.com/camisa1.jpg",
+      "price": {
+        "amount": 29.90,
+        "currency": "BRL"
+      },
+      "category": "roupas"
+    }
+  ]

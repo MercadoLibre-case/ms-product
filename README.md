@@ -38,7 +38,7 @@ ms-product-detail/
 │   │   └── product_controller.py
 │   ├── domain/                  # Camada de domínio
 │   │   ├── entities/            # Entidades (ex: Product, Price)
-│   │   ├── interfaces/          # Contratos (ex: IProductRepository)
+│   │   ├── interfaces/          # Contratos (ex: IProductDetailsRepository)
 │   │   └── services/            # Regras de negócio (ex: ProductService)
 │   ├── dtos/                    # Schemas Pydantic (entrada/saída de dados)
 │   │   ├── product_schema.py

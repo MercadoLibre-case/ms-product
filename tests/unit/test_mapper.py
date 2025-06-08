@@ -1,9 +1,9 @@
-from app.domain.entities.product import Product, Price, Attributes
-from app.dtos.mapper import product_to_schema
+from app.domain.entities.product_details import ProductDetails, Price, Attributes
+from app.dtos.mapper import product_details_to_schema
 
 
-def test_product_to_schema():
-    product = Product(
+def test_product_details_to_schema():
+    product = ProductDetails(
         id="123",
         title="Teste",
         description="Desc",
@@ -19,7 +19,7 @@ def test_product_to_schema():
         seller_id="s1"
     )
 
-    dto = product_to_schema(product)
+    dto = product_details_to_schema(product)
 
     assert dto.id == "123"
     assert dto.price.amount == 10.0
