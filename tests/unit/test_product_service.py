@@ -1,3 +1,5 @@
+from typing import List
+
 import pytest
 from app.domain.services.products_service import ProductsService
 from app.domain.entities.products import Product, Price, Attribute
@@ -32,6 +34,9 @@ class FakeRepo(IProductsRepository):
             if p.id == product_id:
                 return p
         return None
+
+    def get_related_products(self, product_id: str) -> List[Product]:
+        return []
 
 
 def test_deve_retornar_produto_por_id():

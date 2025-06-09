@@ -1,3 +1,5 @@
+from typing import List
+
 from app.domain.interfaces.products_repository_interface import IProductsRepository
 from app.domain.entities.products import Product
 from app.shared.exceptions import EmptyProductListException, ProductNotFoundException
@@ -18,3 +20,6 @@ class ProductsService:
         if not product:
             raise ProductNotFoundException(product_id)
         return product
+
+    def get_related_products(self, product_id: str) -> List[Product]:
+        return self.repository.get_related_products(product_id)

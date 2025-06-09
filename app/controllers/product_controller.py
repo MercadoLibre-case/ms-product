@@ -13,6 +13,7 @@ router = APIRouter()
 repository = ProductsRepositoryJson("app/infrastructure/data/product.json")
 service = ProductsService(repository)
 
+
 @router.get("/", response_model=List[ProductListSchema])
 def get_products():
     try:
@@ -23,6 +24,7 @@ def get_products():
     except Exception:
         raise HTTPException(status_code=500, detail="Erro interno ao buscar produtos")
 
+
 @router.get("/{product_id}", response_model=ProductDetailsSchema)
 def get_product_by_id(product_id: str):
     try:
@@ -32,3 +34,12 @@ def get_product_by_id(product_id: str):
         raise HTTPException(status_code=404, detail=str(e))
     except Exception:
         raise HTTPException(status_code=500, detail="Erro interno ao buscar produto")
+
+
+@router.get("/{product_id}/related", response_model=List[ProductListSchema])
+def get_related_products(product_id: str):
+    try:
+        products = service.get_related_products(product_id)
+        return products_list_to_schema(products)
+    except Exception:
+        raise HTTPException(status_code=500, detail="Erro ao buscar produtos relacionados")

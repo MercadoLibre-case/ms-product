@@ -1,64 +1,44 @@
-# 🧩 Microserviço: `ms-product-detail`
+# MS-Product Service
 
-Este microserviço faz parte do projeto **MercadoLibre Clone – Item Detail Page** e é responsável por fornecer os dados detalhados de produtos por meio de uma API RESTful.
+Este é um microserviço de "Produtos" desenvolvido como parte do desafio do Meli. O serviço é construído usando FastAPI e segue usando Clean Architecture para garantir uma separação clara de responsabilidades e manutenibilidade do código.
 
----
+## 🚀 Tecnologias Utilizadas
 
-## 🎯 Objetivo
+- Python 3.11
+- FastAPI
+- Pydantic
+- Uvicorn
+- Pytest (para testes)
+- Pytest-cov (para cobertura de testes)
+- HTTPX (para testes de integração)
 
-Expor dados de produto via HTTP, com os seguintes campos:
+## 📁 Estrutura do Projeto
 
-- Título e descrição  
-- Imagens  
-- Preço (valor + moeda)  
-- Estoque  
-- ID do vendedor (referência cruzada para outro microserviço)  
-
----
-
-## 🛠️ Stack utilizada
-
-- **Linguagem:** Python 3.10+
-- **Framework:** FastAPI
-- **Validação de dados:** Pydantic
-- **Testes:** Pytest
-- **Cobertura mínima:** 80% (atualmente 96%)
-- **Persistência simulada:** Arquivo JSON (`products.json`)
-- **Documentação automática:** Swagger UI (`/docs`)
-
----
-
-## 🗂 Estrutura de diretórios
-
-```plaintext
-ms-product-detail/
-├── main.py                      # Ponto de entrada da aplicação FastAPI
+```
+ms-product/
 ├── app/
-│   ├── controllers/             # Rotas da API (camada de apresentação)
-│   │   └── product_controller.py
-│   ├── domain/                  # Camada de domínio
-│   │   ├── entities/            # Entidades (ex: Product, Price)
-│   │   ├── interfaces/          # Contratos (ex: IProductDetailsRepository)
-│   │   └── services/            # Regras de negócio (ex: ProductService)
-│   ├── dtos/                    # Schemas Pydantic (entrada/saída de dados)
-│   │   ├── product_schema.py
-│   │   └── mapper.py            # Conversão entre entidades e DTOs
-│   ├── infrastructure/
-│   │   └── data/                # Repositórios concretos e dados simulados
-│   │       ├── product_repository_json.py
-│   │       └── products.json
-│   ├── config/                  # Configurações da aplicação (ex: paths)
-│   └── shared/                  # Utilitários e exceções
-│       └── exceptions.py
-├── tests/
-│   ├── unit/                    # Testes de unidade (serviços, domínio, mapper)
-│   │   └── test_product_service.py
-│   │   └── test_mapper.py
-│   └── integrations/            # Testes de API com TestClient
-│       └── test_api_product.py
-├── requirements.txt             # Dependências do projeto
-├── pytest.ini                   # Configuração de testes e cobertura
-└── README.md                    # Este documento
+│   ├── controllers/       # Controladores da API
+│   ├── dtos/              # Data Transfer Objects
+│   ├── domain/            # Regras de negócio e entidades
+│   ├── infrastructure/    # Implementações de infraestrutura
+│   └── shared/            # Código compartilhado
+├── tests/                 # Testes automatizados
+├── main.py                # Ponto de entrada da aplicação
+└── requirements.txt       # Dependências do projeto
 ```
 
-[![codecov](https://codecov.io/gh/MercadoLibre-case/ms-product/branch/main/graph/badge.svg)](https://codecov.io/gh/MercadoLibre-case/ms-product)
+## 📦 Arquitetura
+
+O projeto segue os princípios da Clean Architecture, dividindo o código em camadas:
+
+- **Controllers**: Responsáveis por receber requisições HTTP e retornar respostas
+- **DTOs**: Objetos de transferência de dados para validação e serialização
+- **Domain**: Contém as regras de negócio e entidades do sistema
+- **Infrastructure**: Implementações concretas de interfaces (repositórios, serviços externos)
+- **Shared**: Código compartilhado entre as camadas
+
+## 🧪 Cobertura de Testes
+
+Usando o CodeCov chegamos a seguinte tag de cobertura de testes:
+[![codecov]("https://codecov.io/gh/MercadoLibre-case/ms-product/branch/main/graph/badge.svg)](https://codecov.io/gh/MercadoLibre-case/ms-product)
+

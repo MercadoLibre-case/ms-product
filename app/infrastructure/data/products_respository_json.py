@@ -47,3 +47,17 @@ class ProductsRepositoryJson(IProductsRepository):
             stock=p.get("stock", 0),
             seller_id=p.get("seller_id", "")
         )
+
+
+    def get_related_products(self, product_id: str) -> List[Product]:
+        products = self._load_data()
+        current = next((p for p in products if p["id"] == product_id), None)
+        if not current:
+            return []
+
+        category = current["category"]
+        return [
+            self._map_to_entity(p)
+            for p in products
+            if p["id"] != product_id and p["category"] == category
+        ]
