@@ -1,6 +1,7 @@
 # MS-Product Service
 
-Este é um microserviço de "Produtos" desenvolvido como parte do desafio do Meli. O serviço é construído usando FastAPI e segue usando Clean Architecture para garantir uma separação clara de responsabilidades e manutenibilidade do código.
+Este é um microserviço de "Produtos" desenvolvido como parte do desafio do Meli. O serviço é construído usando FastAPI e
+segue usando Clean Architecture para garantir uma separação clara de responsabilidades e manutenibilidade do código.
 
 ## 🚀 Tecnologias Utilizadas
 
