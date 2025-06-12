@@ -41,5 +41,6 @@ O projeto segue os princípios da Clean Architecture, dividindo o código em cam
 ## 🧪 Cobertura de Testes
 
 Usando o CodeCov chegamos a seguinte tag de cobertura de testes:
-[![codecov]("https://codecov.io/gh/MercadoLibre-case/ms-product/branch/main/graph/badge.svg)](https://codecov.io/gh/MercadoLibre-case/ms-product)
+[![codecov](https://codecov.io/gh/MercadoLibre-case/ms-product/branch/main/graph/badge.svg)](https://codecov.io/gh/MercadoLibre-case/ms-product)
+
 
